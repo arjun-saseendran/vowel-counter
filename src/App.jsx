@@ -65,7 +65,7 @@ function App() {
     });
   }
    
-
+  // Reset 
     const clearCount = () => {
       // Clear state varibales
       setA(0);
