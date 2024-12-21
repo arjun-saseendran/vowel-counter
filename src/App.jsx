@@ -81,12 +81,12 @@ function App() {
   
 
   return (
-    <div className="container">
+    <div className="container mx-auto px-4">
       <h1 className="text-white text-3xl font-bold text-center mt-10">
         Vowel Counter
       </h1>
-      <div className="bg mx-auto w-1/2 rounded-xl flex flex-col items-center h-96 mt-10 ">
-        <div className="flex justify-between p-5 w-full  text-white mt-5">
+      <div className="bg mx-auto w-full sm:w-3/4 lg:w-1/2 rounded-xl flex flex-col items-center h-auto py-10 mt-10 shadow-lg">
+        <div className="flex flex-wrap justify-between items-center px-5 w-full text-white text-sm sm:text-lg mb-5">
           <span>A : {a} </span>
           <span>+</span>
           <span>E : {e} </span>
@@ -100,25 +100,26 @@ function App() {
           <span>Total : {total} </span>
         </div>
 
-        <div>
+        <div className="w-full px-5">
           <textarea
             ref={inputValue}
-            className="rounded-xl px-20 py-20"
+            className="w-full rounded-xl p-4 text-sm sm:text-base"
             placeholder="Copy paste or type words here..."
+            rows="5"
           ></textarea>
         </div>
-        <div className="mt-2">
+        <div className="mt-4 flex flex-wrap gap-2">
           <button
             onClick={countVowels}
             title="Click here to count vowels"
-            className="text-white bg-gray-500 px-10 py-2 rounded-lg me-2 hover:bg-gray-400"
+            className="text-white bg-gray-500 px-5 py-2 rounded-lg hover:bg-gray-400"
           >
             Count Vowels
           </button>
           <button
             onClick={clearCount}
             title="Click here to reset the count"
-            className="text-white bg-gray-500 px-10 py-2 rounded-lg hover:bg-gray-400"
+            className="text-white bg-gray-500 px-5 py-2 rounded-lg hover:bg-gray-400"
           >
             Reset
           </button>
